@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curewell - Your AI Health Partner</title>
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#93DC5C',
+            dark: '#0f172a',
+          },
+        },
+      },
+    };
+  </script>
+        <script src="script.js"></script>
+    
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar-container" style="padding: px px;"> <!-- Reduced horizontal padding -->
+        <div class="brand">
+            <img src="logo_healthcare.png" alt="CureWell Logo" style="height: 65px;"> <!-- Enlarged logo -->
+            <h1 style="font-size: 32px; font-weight: 900; color: #0d9488; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);">CureWell</h1> <!-- Enhanced heading -->
+        </div>
+        <nav class="desktop-nav">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#how-it-works" class="nav-link">How it Works</a>
+            <a href="#health-tracker" class="nav-link">Health Tracker</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a href="#faqs" class="nav-link">FAQs</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="/login.html" class="nav-link">Login</a>
+            <a href="/signup.html" class="nav-btn">Sign Up</a>
+        </nav>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">
+            <span class="menu-icon">&#9776;</span>
+        </div>
+    </div>
+ </header>
+
+  <!-- Hero Section -->
+  <section style="background-image:url(https://img.freepik.com/free-vector/clean-medical-background_53876-116875.jpg); background-repeat: no-repeat;background-size: cover ;"          class="bg-blue-50 py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-dark"style="font-size: 35px">AI-Powered Healthcare. Personalized for You.</h2>
+      <p class="text-lg md:text-xl mb-6 text-gray-600">Diagnose symptoms, find doctors, get medicine recommendations – all in one platform.</p>
+      <p class="text-lg md:text-xl mb-6 text-gray-600" style="font-weight: bold;font-size:32px;color: #5ed6b8;text-shadow: 0 0 2px black ;">Your Health , Our Priority</p><br>
+      <a href="/signup.html" class="bg-primary text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-blue-400">Get Started</a>
+    </div>
+  </section>
+
+<!--Features Section-->
+  <section style="padding: 60px; background: linear-gradient(to bottom, #edf6f9, #f9fafb); font-family: 'Segoe UI', sans-serif;">
+  <h1 style="text-align: center; font-size: 38px; color: #4dbdae; margin-bottom: 50px; font-weight: bold; letter-spacing: 1px;">
+    🩺 Health Tracker Features
+  </h1>
+
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+
+   
+    <!-- Symptom Checker -->
+    <div class="feature-box">
+      <h2>🩺 Symptom Checker</h2>
+      <form id="symptomForm">
+        <label><input type="checkbox" value="fever" /> Fever</label>
+        <label><input type="checkbox" value="cough" /> Cough</label>
+        <label><input type="checkbox" value="headache" /> Headache</label>
+        <label><input type="checkbox" value="fatigue" /> Fatigue</label>
+        <label><input type="checkbox" value="soreThroat" /> Sore Throat</label>
+        <button type="submit">Check Symptoms</button>
+      </form>
+    </div>
+
+    <!-- Daily Goals -->
+    <div class="feature-box">
+      <h2>🎯 Today's Daily Goals</h2>
+      <form id="goalForm">
+        <input type="number" placeholder="Target Weight (kg)" />
+        <input type="number" placeholder="Steps Goal" />
+        <input type="number" placeholder="Water Intake Goal (ml)" />
+        <button type="submit">Save Goals</button>
+      </form>
+    </div>
+
+    <!-- Fitness Planner -->
+    <div class="feature-box">
+      <h2>💪 Fitness & Diet Planner</h2>
+      <form id="logForm">
+        <input type="number" placeholder="Steps Walked" />
+        <input type="number" placeholder="Water Drank (ml)" />
+        <input type="text" placeholder="Meal Name" />
+        <input type="number" placeholder="Calories" />
+        <button type="submit">Add Log</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!--Health Monitering and emergency Support-->
+
+
+
+  
+<section id="health-monitoring" style="padding: 60px 20px; background: #f0f7f6;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h1 style="text-align: center; color: #2f9b89; font-size: 36px; margin-bottom: 40px;">🩺 Health Monitoring & Emergency Support</h1>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      
+      <!-- First Aid Guide -->
+      <div class="health-box">
+        <h2 class="box-title">🚑 First Aid Guide</h2>
+        <div class="button-group">
+          <button onclick="showGuide('burns')">Burns</button>
+          <button onclick="showGuide('cuts')">Cuts</button>
+          <button onclick="showGuide('choking')">Choking</button>
+          <button onclick="showGuide('fractures')">Fractures</button>
+          <button onclick="showGuide('fainting')">Fainting</button>
+        </div>
+        <div id="guide" class="guide-display"></div>
+      </div>
+
+      <!-- BMI Calculator -->
+      <div class="health-box">
+        <h2 class="box-title">🧮 BMI Calculator</h2>
+        <input id="height" type="number" placeholder="Height (in cm)" />
+        <input id="weight" type="number" placeholder="Weight (in kg)" />
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <div id="result-box" class="bmi-result">
+          <p id="result"></p>
+        </div>
+        <div class="bmi-info">
+          <h4>📘 What Your BMI Means:</h4>
+          <ul>
+            <li><strong>Underweight:</strong> BMI less than 18.5 – Risk of nutritional deficiency.</li>
+            <li><strong>Normal:</strong> BMI 18.5–24.9 – Maintain a healthy lifestyle!</li>
+            <li><strong>Overweight:</strong> BMI 25–29.9 – Risk of developing health problems.</li>
+            <li><strong>Obese:</strong> BMI 30 or above – Seek medical guidance.</li>
+          </ul>
+          <p>🔍 <em>Note:</em> BMI is a general indicator and may not apply to athletes or people with certain medical conditions.</p>
+        </div>
+      
+      </div>
+
+      <!-- dietplanner -->
+      <div class="health-box">
+        <h2 class="box-title">🥗 Diet Planner</h2>
+  
+        <form id="dietForm">
+          <input type="number" placeholder="Age" id="age" required />
+          <input type="number" placeholder="Weight (kg)" id="weight" required />
+          <input type="number" placeholder="Height (cm)" id="height" required />
+  
+          <select id="goal">
+            <option value="maintain">Maintain Weight</option>
+            <option value="lose">Lose Weight</option>
+            <option value="gain">Gain Weight</option>
+          </select>
+  
+          <button type="submit">Get My Plan</button>
+        </form>
+  
+        <div id="result" class="hidden"></div>
+      </div>
+
+    </div>
+  </div>
+</section>  
+  
+  <!-- Features -->
+  <section id="features">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3> Our Key Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <div class="feature-card">
+          <img src="https://img.icons8.com/clouds/100/stethoscope.png" alt="AI Health Check">
+          <h4>AI Health Check</h4>
+          <p>Smart symptom analysis for quick and early condition prediction using AI algorithms.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://img.icons8.com/clouds/100/medical-doctor.png" alt="Doctor Suggestions">
+          <h4>Doctor Suggestions</h4>
+          <p>Get personalized recommendations of trusted specialists near you, instantly.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://static.vecteezy.com/system/resources/previews/017/351/492/original/medical-guide-concept-color-illustration-vector.jpg" alt="Medicine Guide">
+          <h4>Medicine Guide</h4>
+          <p>Access personalized treatment and medicine suggestions with dosage and instructions.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- How It Works -->
+  <section id="how-it-works" style="background-color: rgb(224, 247, 243); padding: 64px 24px; font-family: 'Segoe UI', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h3 style="font-size: 36px; font-weight: 700; color: #202220; margin-bottom: 48px;">How It Works</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+        
+        <div style="background-color: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);">
+          <h4 style="font-size: 20px; font-weight: 600; color: #5878d8; margin-bottom: 12px;">1. Sign Up</h4>
+          <p style="font-size: 15px; color: #4a4a4a;">Create your profile and add basic health info.</p>
+        </div>
+        
+        <div style="background-color: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);">
+          <h4 style="font-size: 20px; font-weight: 600; color: #5878d8; margin-bottom: 12px;">2. Check Symptoms</h4>
+          <p style="font-size: 15px; color: #4a4a4a;">Enter symptoms and get AI-powered analysis & condition prediction.</p>
+        </div>
+        
+        <div style="background-color: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);">
+          <h4 style="font-size: 20px; font-weight: 600; color:#5878d8; margin-bottom: 12px;">3. Get Help</h4>
+          <p style="font-size: 15px; color: #4a4a4a;">Find doctors, book appointments, and follow suggested treatments.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+ 
+<!--FAQs Section-->
+    <section style="max-width: 900px; margin: 60px auto; padding: 20px;">
+        <h2 style="text-align: center; font-size: 32px; color: #0f766e; margin-bottom: 40px;">❓ Frequently Asked Questions</h2>
+      
+        <div class="faq-container">
+          
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question">What is Cure Well?</button>
+            <div class="faq-answer">
+              <p>Cure Well is a health-focused web platform that helps users track symptoms, set daily fitness goals, plan their diet, and get personalized health insights.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">Is Cure Well free to use?</button>
+            <div class="faq-answer">
+              <p>Yes! Cure Well is completely free to use for all users. We believe in making health tools accessible for everyone.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">Can Cure Well diagnose my condition?</button>
+            <div class="faq-answer">
+              <p>No, Cure Well does not provide medical diagnoses. It helps you understand your symptoms and suggests possible conditions. For accurate diagnosis and treatment, consult a certified medical professional.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question">How is my data handled?</button>
+            <div class="faq-answer">
+              <p>Your data is handled with utmost confidentiality. We use secure methods to store your health inputs and never share your information without your consent.</p>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+<!--Give your Review Section-->
+
+  <section style="max-width: 900px;border-radius: 30px; margin: 60px auto; padding: 20px;background-color: #bbe1da;">
+    <h2 style="text-align: center; font-size: 32px; color: #0f766e; margin-bottom: 30px;">📝 Share Your Experience</h2>
+    
+    <div class="review-container">
+      <form id="reviewForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" required placeholder="Enter your name" />
+  
+
+
+        <label for="rating">Rating</label>
+<div class="star-rating" id="starRating">
+  <span class="star" data-value="1">★</span>
+  <span class="star" data-value="2">★</span>
+  <span class="star" data-value="3">★</span>
+  <span class="star" data-value="4">★</span>
+  <span class="star" data-value="5">★</span>
+</div>
+<input type="hidden" id="rating" required />
+  
+        <label for="review">Your Feedback</label>
+        <textarea id="review" rows="4" required placeholder="Tell us what you think..."></textarea>
+  
+        <button type="submit">Submit Review</button>
+      </form>
+  
+      <div id="thankYouMsg" style="display:none; margin-top: 20px; color: green; font-weight: 500;">
+        ✅ Thank you for your feedback!
+      </div>
+    </div>
+  </section>
+     
+  <!-- reviews of our website -->
+  <div id="slideshow">
+    <h2 class="section-title">Hear from Our Happy Users</h2>
+    <p class="section-subtitle">
+      Here's what our happy users have to say about their CureWell experience!
+    </p>
+  
+    <div class="slider-container">
+      <div class="slide-track">
+        <!-- Testimonial 1 -->
+        <div class="card">
+          <img
+            src="https://t3.ftcdn.net/jpg/01/38/58/36/360_F_138583672_qcRVXRtLhbzXii7icj3F7mCBlrgYFhaw.jpg"
+            alt="Vaibhav"
+          />
+          <p>
+            "A must-have for anyone looking for quick healthcare guidance. The
+            first-aid section is top-notch!"
+          </p>
+          <h3>Vaibhav</h3>
+          <span>Patna, Bihar </span>
+        </div>
+  
+        <!-- Testimonial 2 -->
+        <div class="card">
+          <img
+            src="https://media.istockphoto.com/id/916060452/photo/time-to-clock-another-personal-best.jpg?s=1024x1024&w=is&k=20&c=K0QNIuMzzuYORZDt7X6IyVCytK2I5qJPgas8cnkvy8w="
+            alt="Siddharth Singh"
+          />
+          <p>
+            "BMI calculator and fitness planner are very handy. Beautiful design
+            and smooth performance."
+          </p>
+          <h3>Siddharth Singh</h3>
+          <span>Gopalganj, Bihar</span>
+        </div>
+  
+        <!-- Testimonial 3 -->
+        <div class="card">
+          <img
+            src="https://media.istockphoto.com/id/1441759606/photo/happy-sportswoman-with-earbuds-running-in-the-park.jpg?s=612x612&w=0&k=20&c=_RHiYpQFiZRxESWzCsr8k9SsOr-T-Qj3OcpINB1aVrg="
+            alt="Ankita Singh"
+          />
+          <p>
+            "The personalized medicine suggestions were super helpful. Feels like
+            having a virtual doctor!"
+          </p>
+          <h3>Ankita Singh</h3>
+          <span>Fatehpur, U.P.</span>
+        </div>
+  
+        
+        <!-- Testimonial 4 -->
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-photo/young-beautiful-female-student-glasses-smiling-holding-folders-outdoors_176420-2551.jpg?t=st=1744382311~exp=1744385911~hmac=a7fd7b44a40c12e748578b3c9abf223864c115832af666b8ef3893aa3650d94d&w=1380"
+            alt="Shikha Tiwari"
+          />
+          <p>
+            "CureWell helped me track symptoms and find a nearby doctor in
+            minutes! Love the UI and ease of use."
+          </p>
+          <h3>Shikha Tiwari</h3>
+          <span>Kanpur, U.P.</span>
+        </div>
+  
+        <!-- Testimonial 5 -->
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-photo/portrait-male-tourist-visiting-great-wall-china_23-2151261922.jpg?t=st=1744449647~exp=1744453247~hmac=e5b70662d7d208cc425438703d60b048412535d3945d2ad7650cfcf17c491630&w=1380"
+            alt="Naitik Raj"
+          />
+          <p>
+              "From symptom checking to doctor appointments – everything I needed in one place!"
+          </p>
+          <h3>Naitik Raj</h3>
+          <span>Bhopal, M.P.</span>
+        </div>
+  
+        <!-- Testimonial 6 -->
+        <div class="card">
+          <img
+            src="https://img.freepik.com/premium-photo/confident-elderly-man-white-shirt-with-crossed-arms_687684-2408.jpg?w=826"
+            alt="Krish Rajput"
+          />
+          <p>
+              "This website is like having a personal healthcare assistant! From symptom analysis to
+               booking appointments and getting fitness advice – it's everything I needed." –
+          </p>
+          <h3>Krish Rajput</h3>
+          <span>Jaipur, Rajasthan</span>
+        </div>
+  
+        <!-- Testimonial 7 -->
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-photo/portrait-young-smiling-pretty-girl-plaid-shirt-posing_114579-70643.jpg?t=st=1744450029~exp=1744453629~hmac=60ffca04b8016668f5df19f737955ff0745724bf8764a056cd68ce83652dcb1c&w=1380"
+            alt="Shivanshi Srivastava"
+          />
+          <p>
+              "The AI health checker and daily goals tracker keep me informed and motivated every day!"
+          </p>
+          <h3>Shivanshi Srivastava</h3>
+          <span>Lucknow, U.P.</span>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="
+
+  background: linear-gradient(0deg, rgb(26, 70, 44) 0%, rgb(50, 106, 106) 100%);
+   color: #e2e8f0; padding: 60px 20px; font-family: 'Segoe UI', sans-serif;">
+      <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px;">
+        
+        <!-- Logo + About -->
+        <div>
+          <img src="logo_healthcare.png" alt="Cure Well Logo" style="margin-bottom: 16px; max-width: 150px;">
+          <p style="font-size: 14px; line-height: 1.7; color: #cbd5e1;">
+            Cure Well is your digital healthcare partner — offering AI-based symptom checking, personalized diet and fitness planning, doctor appointments, and much more for a healthier you.
+          </p>
+        </div>
+    
+        <!-- Quick Links -->
+        <div>
+          <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0; font-size: 14px; color: #cbd5e1; line-height: 2;">
+            <li><a href="#home" style="color: inherit; text-decoration: none;">Home</a></li>
+            <li><a href="#features" style="color: inherit; text-decoration: none;">Features</a></li>
+            <li><a href="#doctors" style="color: inherit; text-decoration: none;">Find Doctors</a></li>
+            <li><a href="#diet-planner" style="color: inherit; text-decoration: none;">Diet Planner</a></li>
+            <li><a href="#symptom-checker" style="color: inherit; text-decoration: none;">Symptom Checker</a></li>
+            <li><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Contact Info -->
+        <div>
+          <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase;">Contact</h4>
+          <p style="font-size: 14px; color: #cbd5e1;">📧 support@curewell.com</p>
+          <p style="font-size: 14px; color: #cbd5e1;">📞 +91 98765 43210</p>
+          <p style="font-size: 14px; color: #cbd5e1;">📍 Patna, Bihar, India</p>
+        </div>
+    
+        <!-- Social Media -->
+        <div>
+          <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase;">Connect With Us</h4>
+          <div style="display: flex; gap: 16px; font-size: 20px;">
+            <a href="#" style="color: #f0f0f0; text-decoration: none;"><i class="fa-brands fa-google"></i></a>
+            <a href="#" style="color: #f0f0f0; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" style="color: #f0f0f0; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" style="color: #f0f0f0; text-decoration: none;"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Bottom Bar -->
+      <div style="border-top: 1px solid #1e293b; margin-top: 40px; padding-top: 20px; text-align: center; font-size: 13px; color: #94a3b8;">
+        <p>© 2025 Cure Well — All Rights Reserved.</p>
+        <a href="#privacy-policy" style="color: #38bdf8; text-decoration: none; font-size: 12px;">Privacy Policy</a>
+      </div>
+    </footer>
+
+
+ <!-- Floating Emergency Button -->
+ <div id="emergencyBtn" onclick="toggleSupportOverlay()">🆘 Emergency</div>
+
+ <!-- Popup Overlay with iframe -->
+ <div id="emergencyOverlay">
+   <div class="overlay-content">
+     <button class="close-btn" onclick="toggleSupportOverlay()">✖</button>
+     <iframe src="feature/support.html" frameborder="0"></iframe>
+   </div>
+ </div>
+
+
+</section>
+</body>
+</html>
