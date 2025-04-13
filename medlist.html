@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicines List</title>
+    <link rel="stylesheet" href="medliststyle.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="home.html" target="_blank"
+        ><button>
+          <img
+            src="logo_healthcare.png"
+            width="60rem"
+            alt="Home Page"
+          /></button
+      ></a>
+
+      <h1 class="title">💊 Medicines List</h1>
+
+      <a href="cart.html" target="_blank"
+        ><button>
+          <img
+            src="https://freepngimg.com/thumb/cart/3-2-cart-png-hd.png"
+            width="60rem"
+            alt="Home Page"
+          /></button
+      ></a>
+      </nav>
+
+    <!-- Medicine Data embedded directly in HTML -->
+    <div id="medicineList" class="medicine-container">
+      <div
+        class="medicine-card"
+        data-name="Paracetamol"
+        data-use="Fever, mild pain relief"
+        data-dosage="500mg every 4-6 hours"
+        data-precautions="Avoid alcohol, not for liver patients"
+        data-cost="20"
+        data-image="https://5.imimg.com/data5/SELLER/Default/2021/12/LK/ON/KX/43755673/paracetamol-500mg-tablet.jpg"
+      >
+        <img
+          src="https://5.imimg.com/data5/SELLER/Default/2021/12/LK/ON/KX/43755673/paracetamol-500mg-tablet.jpg"
+          alt="Paracetamol"
+        />
+        <div class="medicine-content">
+          <h3>Paracetamol</h3>
+          <p><strong>Use:</strong> Fever, mild pain relief</p>
+          <p><strong>Dosage:</strong> 500mg every 4-6 hours</p>
+          <p><strong>Precautions:</strong> Avoid alcohol</p>
+          <p><strong>Cost:</strong> ₹20 for 10 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Cetirizine"
+        data-use="Allergy, cold"
+        data-dosage="10mg once daily"
+        data-precautions="May cause drowsiness"
+        data-cost="15"
+        data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRImJmKJtg-GqjOlgcADBVyC_-erneSXy85bQ&s"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRImJmKJtg-GqjOlgcADBVyC_-erneSXy85bQ&s"
+          alt="Cetirizine"
+        />
+        <div class="medicine-content">
+          <h3>Cetirizine</h3>
+          <p><strong>Use:</strong> Allergy, cold</p>
+          <p><strong>Dosage:</strong> 10mg once daily</p>
+          <p><strong>Precautions:</strong> May cause drowsiness</p>
+          <p><strong>Cost:</strong> ₹15 for 10 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <div
+        class="medicine-card"
+        data-name="Amoxicillin"
+        data-use="Bacterial infections"
+        data-dosage="500mg every 8 hours"
+        data-precautions="Complete full course"
+        data-cost="35"
+        data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo3LVmpjf09Ti9eOWdBrLfK2vtg_j8HRPTvw&s"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo3LVmpjf09Ti9eOWdBrLfK2vtg_j8HRPTvw&s"
+          alt="Amoxicillin"
+        />
+        <div class="medicine-content">
+          <h3>Amoxicillin</h3>
+          <p><strong>Use:</strong> Bacterial infections</p>
+          <p><strong>Dosage:</strong> 500mg every 8 hours</p>
+          <p><strong>Precautions:</strong> Complete full course</p>
+          <p><strong>Cost:</strong> ₹35 for 10 capsules</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Ibuprofen"
+        data-use="Pain relief, inflammation"
+        data-dosage="400mg every 6-8 hours"
+        data-precautions="Take with food, avoid in ulcers"
+        data-cost="25"
+        data-image="https://5.imimg.com/data5/SELLER/Default/2023/7/325863554/WI/JM/SY/135658020/ibuprofen-tablets-ip-200-mg-.jpg"
+      >
+        <img
+          src="https://5.imimg.com/data5/SELLER/Default/2023/7/325863554/WI/JM/SY/135658020/ibuprofen-tablets-ip-200-mg-.jpg"
+          alt="Ibuprofen"
+        />
+        <div class="medicine-content">
+          <h3>Ibuprofen</h3>
+          <p><strong>Use:</strong> Pain relief, inflammation</p>
+          <p><strong>Dosage:</strong> 400mg every 6-8 hours</p>
+          <p><strong>Precautions:</strong> Take with food, avoid in ulcers</p>
+          <p><strong>Cost:</strong> ₹25 for 10 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Loperamide"
+        data-use="Diarrhea"
+        data-dosage="2mg after each loose stool"
+        data-precautions="Not for long-term use"
+        data-cost="18"
+        data-image="https://image.made-in-china.com/203f0j00iLgGzhslgcok/Loperamide-Hydrochloride-Capsule-2mg-GMP-Medicine.webp"
+      >
+        <img
+          src="https://image.made-in-china.com/203f0j00iLgGzhslgcok/Loperamide-Hydrochloride-Capsule-2mg-GMP-Medicine.webp"
+          alt="Loperamide"
+        />
+        <div class="medicine-content">
+          <h3>Loperamide</h3>
+          <p><strong>Use:</strong> Diarrhea</p>
+          <p><strong>Dosage:</strong> 2mg after each loose stool</p>
+          <p><strong>Precautions:</strong> Not for long-term use</p>
+          <p><strong>Cost:</strong> ₹18 for 6 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Ranitidine"
+        data-use="Acidity, ulcers"
+        data-dosage="150mg twice a day"
+        data-precautions="Discontinue if allergic"
+        data-cost="12"
+        data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrGxcYbjLo-yZtOVvp9cYtHmvNHTjmTSMEfA&s"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrGxcYbjLo-yZtOVvp9cYtHmvNHTjmTSMEfA&s"
+          alt="Ranitidine"
+        />
+        <div class="medicine-content">
+          <h3>Ranitidine</h3>
+          <p><strong>Use:</strong> Acidity, ulcers</p>
+          <p><strong>Dosage:</strong> 150mg twice a day</p>
+          <p><strong>Precautions:</strong> Discontinue if allergic</p>
+          <p><strong>Cost:</strong> ₹12 for 10 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Azithromycin"
+        data-use="Bacterial infections (throat, lungs, skin)"
+        data-dosage="500mg once daily for 3 days"
+        data-precautions="Take on empty stomach"
+        data-cost="45"
+        data-image="https://www.krishlarpharma.com/wp-content/uploads/2019/12/KRITHRO-500-tablet.jpg"
+      >
+        <img
+          src="https://www.krishlarpharma.com/wp-content/uploads/2019/12/KRITHRO-500-tablet.jpg"
+          alt="Azithromycin"
+        />
+        <div class="medicine-content">
+          <h3>Azithromycin</h3>
+          <p>
+            <strong>Use:</strong> Bacterial infections (throat, lungs, skin)
+          </p>
+          <p><strong>Dosage:</strong> 500mg once daily for 3 days</p>
+          <p><strong>Precautions:</strong> Take on empty stomach</p>
+          <p><strong>Cost:</strong> ₹45 for 3 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Metformin"
+        data-use="Type 2 Diabetes"
+        data-dosage="500mg twice a day with meals"
+        data-precautions="Not for Type 1 diabetes"
+        data-cost="30"
+        data-image="https://media.istockphoto.com/id/472120679/photo/metformin.jpg?s=612x612&w=0&k=20&c=1BzRBjagCoJh_eDm6rjZQ7iQo9k1TRD4QgB__nGpPV0="
+      >
+        <img
+          src="https://media.istockphoto.com/id/472120679/photo/metformin.jpg?s=612x612&w=0&k=20&c=1BzRBjagCoJh_eDm6rjZQ7iQo9k1TRD4QgB__nGpPV0="
+          alt="Metformin"
+        />
+        <div class="medicine-content">
+          <h3>Metformin</h3>
+          <p><strong>Use:</strong> Type 2 Diabetes</p>
+          <p><strong>Dosage:</strong> 500mg twice a day with meals</p>
+          <p><strong>Precautions:</strong> Not for Type 1 diabetes</p>
+          <p><strong>Cost:</strong> ₹30 for 10 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Aspirin"
+        data-use="Pain relief, blood thinner"
+        data-dosage="75-150mg once daily"
+        data-precautions="Avoid in bleeding disorders"
+        data-cost="22"
+        data-image="https://5.imimg.com/data5/SELLER/Default/2023/7/330506870/UM/GZ/QO/135658020/aspirin-dispersible-tablets.jpg"
+      >
+        <img
+          src="https://5.imimg.com/data5/SELLER/Default/2023/7/330506870/UM/GZ/QO/135658020/aspirin-dispersible-tablets.jpg"
+          alt="Aspirin"
+        />
+        <div class="medicine-content">
+          <h3>Aspirin</h3>
+          <p><strong>Use:</strong> Pain relief, blood thinner</p>
+          <p><strong>Dosage:</strong> 75-150mg once daily</p>
+          <p><strong>Precautions:</strong> Avoid in bleeding disorders</p>
+          <p><strong>Cost:</strong> ₹22 for 14 tablets</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        class="medicine-card"
+        data-name="Salbutamol Inhaler"
+        data-use="Asthma, breathing issues"
+        data-dosage="2 puffs when needed"
+        data-precautions="Overuse can cause tremors"
+        data-cost="110"
+        data-image="https://5.imimg.com/data5/SELLER/Default/2023/7/324814785/HM/VX/SR/8612369/ventolin-inhaler-salbutamol.png"
+      >
+        <img
+          src="https://5.imimg.com/data5/SELLER/Default/2023/7/324814785/HM/VX/SR/8612369/ventolin-inhaler-salbutamol.png"
+          alt="Salbutamol Inhaler"
+        />
+        <div class="medicine-content">
+          <h3>Salbutamol Inhaler</h3>
+          <p><strong>Use:</strong> Asthma, breathing issues</p>
+          <p><strong>Dosage:</strong> 2 puffs when needed</p>
+          <p><strong>Precautions:</strong> Overuse can cause tremors</p>
+          <p><strong>Cost:</strong> ₹110 per inhaler</p>
+          <button class="shop-now">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Add more medicines in similar format -->
+    </div>
+
+    <script src="medlistscript.js"></script>
+  </body>
+</html>

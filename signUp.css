@@ -1,0 +1,144 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  width: 90%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lftone, #rytone {
+  flex: 1;
+  padding: 40px;
+}
+
+#lftone {
+  background-color: #e0f7fa;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+
+#lftone h1 {
+  font-size: 28px;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+#lftone p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+}
+
+#lftone img {
+  margin-top: 10px;
+  width: 200px;
+}
+
+#rytone {
+  background-color: #ffffff;
+}
+
+.ritem h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+form h2 {
+  font-size: 18px;
+  color: #00796b;
+  margin-top: 10px;
+}
+
+form p {
+  font-size: 14px;
+  color: #555;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.data {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.data:focus {
+  border-color: #00796b;
+}
+
+#fbtn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#fbtn:hover {
+  background-color: #004d40;
+}
+
+#acc {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#acc:hover {
+  text-decoration: underline;
+}
+
+#logo {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#logo img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.1);
+}

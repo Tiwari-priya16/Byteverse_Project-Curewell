@@ -1,0 +1,356 @@
+/* --- Styles for the main page body --- */
+/* body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0; 
+    padding: 20px;
+    color: #333; 
+} */
+
+/* --- Modal Styles (Pop-up) --- */
+
+#healthFlowModal {
+    display: none; /* Ensure it's hidden on page load */
+  }
+
+  #healthFlowModal {
+    display: none; /* Ensure it starts hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: appear 0.5s ease;
+  }
+  
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Scroll overlay if content overflows viewport */
+    background-color: rgba(0,0,0,0.7); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.modal.hidden {
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+
+/* --- Modal Content: APPLY BACKGROUND IMAGE & DARK THEME --- */
+.modal-content {
+    /* ADD the background styles */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("2.jpg"); Gradient overlay on image */
+    background-color: #334e51;
+
+    /* Adjust for dark background */
+    color: #f0f0f0; /* Light default text color inside modal */
+
+    /* Layout and appearance */
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* Shadow for depth */
+    max-height: 90vh; /* Limit height to prevent overflow */
+    overflow-y: auto; /* Allow scrolling within the modal content */
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.visible .modal-content {
+    transform: scale(1); /* Animate scale on visible */
+}
+
+
+.close-button {
+    color: #ccc; /* Light close button */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for visibility */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- Step Styles (Inside Modal) --- */
+.flow-step {
+    animation: fadeIn 0.4s ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.flow-step h2 {
+    margin-top: 0;
+    color: #ffffff; /* White step headings */
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.modal-content > h3 { /* Main modal title */
+     margin-top: 0;
+     margin-bottom: 30px;
+     text-align: center;
+     color: #ffffff; /* White main title */
+     font-weight: bold;
+     font-size: 1.6em;
+}
+
+/* --- Form Element Styles (Inside Modal) --- */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Checkbox groups */
+.form-group.checkboxes label {
+    display: block;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #f0f0f0; /* Light label text */
+}
+
+.form-group.checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+    accent-color: #4bc4ba; /* Style the checkmark */
+}
+
+/* "Other" text inputs */
+.other-text-input {
+    display: none; /* Handled by JS */
+    margin-left: 28px;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark input background */
+    color: #ffffff; /* Light input text */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 4px;
+    width: calc(100% - 45px);
+    box-sizing: border-box;
+}
+.other-text-input::placeholder {
+    color: #bbb; /* Light placeholder text */
+}
+
+/* --- Button-like Radio Options --- */
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.button-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.button-choice {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    font-size: 0.95em;
+    flex-grow: 1;
+    flex-basis: calc(50% - 12px);
+    box-sizing: border-box;
+    /* Default state for dark background */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.button-choice:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.button-options input[type="radio"]:checked + .button-choice {
+    /* Selected state remains distinct */
+    background-color: #1cb0a4;
+    color: white;
+    border-color: #0056b3;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button-options input[type="radio"]:focus-visible + .button-choice {
+    outline: 2px solid #6cb2ff; /* Light blue outline for focus */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Textarea style */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1em;
+    /* Dark background */
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+textarea::placeholder {
+    color: #bbb;
+}
+
+/* --- Navigation/Action Button Styles --- */
+.prev-btn, .next-btn, .finish-btn, .action-btn {
+    background-color: #308f8d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.prev-btn:hover, .next-btn:hover, .finish-btn:hover, .action-btn:hover {
+    background-color: #1c7774;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.prev-btn {
+    background-color: #6c757d; /* Grey for previous */
+}
+.prev-btn:hover {
+     background-color: #5a6268;
+}
+
+.action-btn {
+    background-color: #28a745; /* Green for actions in recommendation */
+    margin-bottom: 5px;
+}
+.action-btn:hover {
+     background-color: #218838;
+}
+
+/* --- Error Message Style --- */
+.error-message {
+     color: #ffcdd2; /* Light red */
+     font-size: 0.9em;
+     font-weight: bold;
+     margin-top: 10px;
+     width: 100%;
+     display: none; /* Hidden by default */
+     text-shadow: 1px 1px 1px rgba(0,0,0,0.4); /* Visibility aid */
+}
+
+/* --- Recommendation Area Styles (Adjusted for Dark Theme) --- */
+#recommendation-content {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left-width: 5px;
+    border-left-style: solid;
+}
+
+#recommendation-content p, #recommendation-content ul li {
+    margin-bottom: 10px;
+}
+#recommendation-content p:last-child, #recommendation-content ul li:last-child {
+    margin-bottom: 0;
+}
+#recommendation-content strong {
+     font-weight: bold;
+}
+#recommendation-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Default recommendation style */
+#recommendation-content {
+    background-color: rgba(0, 0, 0, 0.3); /* Dark semi-transparent base */
+    border-left-color: #6cb2ff; /* Light blue accent */
+    color: #f0f0f0; /* Light text */
+}
+#recommendation-content strong { color: #ffffff; }
+
+/* Warning style */
+#recommendation-content.warning {
+     background-color: rgba(220, 53, 69, 0.3); /* Semi-transparent red */
+     border-left-color: #dc3545; /* Solid red accent */
+     color: #f8d7da; /* Light red text */
+}
+#recommendation-content.warning strong { color: #ffffff; }
+
+/* Wellness style */
+#recommendation-content.wellness {
+    background-color: rgba(40, 167, 69, 0.3); /* Semi-transparent green */
+    border-left-color: #28a745; /* Solid green accent */
+    color: #d4edda; /* Light green text */
+}
+#recommendation-content.wellness strong { color: #ffffff; }
+
+
+/* Recommendation actions layout */
+#recommendation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px; /* Add space above action buttons */
+}

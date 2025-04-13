@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="medliststyle.css" />
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <h1 class="title">🛒 Your Cart</h1>
+
+  <div id="cartContainer" class="medicine-container"></div>
+
+  <div id="cartSummary">
+    <p><strong>Total Items:</strong> <span class="nooof" id="totalItems">0</span></p>
+    <p><strong>Total Cost:</strong> ₹<span class="nooof"  id="totalCost">0</span></p>
+    <button id="checkoutBtn" class="shop-now">Checkout</button>
+    <button id="resetBtn" class="shop-now" style="background-color:#e74c3c">Reset Cart</button>
+  </div>
+  
+
+  <script src="cart.js"></script>
+</body>
+</html>
